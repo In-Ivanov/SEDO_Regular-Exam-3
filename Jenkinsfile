@@ -9,13 +9,13 @@ pipeline {
 
         stage("Build") {
             steps {
-                bat "dotnet build --configuration Release --no-restore"
+                bat "dotnet build --no-restore"
             }
         }
 
         stage("Run Unit and Integration Tests") {
             steps {
-                bat "dotnet test --configuration Release --no-build --verbosity normal"
+                bat "dotnet test --no-build --verbosity normal"
             }
         }
     }
