@@ -17,7 +17,7 @@ pipeline {
         }
         stage("Run Unit and Integration Test"){
             steps{
-                bat "dotnet test --no-build --verbosity normal"
+                bat "dotnet test --configuration Release --no-build --verbosity normal"
             }
         }
     }
