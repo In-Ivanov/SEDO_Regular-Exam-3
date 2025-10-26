@@ -1,10 +1,6 @@
 pipeline {
     agent any
-
-    triggers {
-        pollSCM('H/5 * * * *') 
-    }
-    stages{
+       stages{
         stage("Restore the dependencies"){
             steps{
                 bat "dotnet restore"
